@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AnalisaMath — apoio passo a passo em Análise Matemática.">
+  <title>AnalisaMath | Assistente de Análise Matemática</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">∑</span><span>Analisa<span class="brand-accent">Math</span></span></a>
+    <nav><a href="#resolver">Resolver</a><a href="#temas">Temas</a><a href="#sobre">Sobre</a></nav>
+    <span class="status"><i></i> Motor matemático ativo</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✦</span> O teu espaço de aprendizagem</div>
+        <h1>Compreende a matemática.<br><em>Passo a passo.</em></h1>
+        <p>Resolve exercícios de Análise Matemática e acompanha o raciocínio por trás de cada resultado.</p>
+        <a class="primary-link" href="#resolver">Começar a resolver <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="math-card"><span class="math-label">ANÁLISE MATEMÁTICA</span><div class="formula">lim <small>x → a</small></div><div class="formula fraction"><span>f(x) − f(a)</span><b></b><span>x − a</span></div><div class="math-foot">ENTENDER • PRATICAR • DOMINAR</div></div>
+        <span class="floating-symbol symbol-a">∫</span><span class="floating-symbol symbol-b">ƒ′</span><span class="floating-symbol symbol-c">∞</span>
+      </div>
+    </section>
+
+    <section class="workspace" id="resolver">
+      <div class="section-heading">
+        <div><div class="eyebrow">ÁREA DE RESOLUÇÃO</div><h2>Vamos resolver um exercício?</h2></div>
+        <span class="version">VERSÃO 1.0</span>
+      </div>
+      <div class="solver-grid">
+        <div class="input-panel">
+          <label for="topic">Escolhe o conteúdo</label>
+          <select id="topic">
+            <option value="limit">Limites</option>
+            <option value="derivative">Derivadas</option>
+          </select>
+          <label for="expression" id="expression-label">Expressão do limite</label>
+          <div class="input-wrap"><input id="expression" autocomplete="off" spellcheck="false" placeholder="Ex.: x^2 - 4*x + 4"></div>
+          <div class="limit-options" id="limit-options">
+            <div><label for="approach">Quando x tende para</label><input id="approach" value="2" placeholder="Ex.: 2, -1, inf"></div>
+            <div><label for="side">Tipo de limite</label><select id="side"><option value="both">Normal</option><option value="left">Pela esquerda</option><option value="right">Pela direita</option></select></div>
+          </div>
+          <button id="solve-button" class="solve-button">Resolver exercício <span>→</span></button>
+          <p class="input-note">Este protótipo aceita expressões polinomiais com x, potências inteiras e frações.</p>
+          <div class="examples"><span>EXPERIMENTA:</span><button data-example="x^2 - 4*x + 4" data-at="2">Limite polinomial</button><button data-example="3*x^3 - 2*x^2 + 5*x - 7" data-at="2" data-topic="derivative">Derivada</button></div>
+        </div>
+        <div class="result-panel" aria-live="polite">
+          <div class="result-top"><span class="result-icon">✳</span><span>RESOLUÇÃO</span><span class="result-line"></span></div>
+          <div id="result-content" class="empty-state"><div class="empty-icon">ƒ(x)</div><h3>A tua resolução aparece aqui</h3><p>Introduz uma expressão, escolhe o conteúdo e carrega em “Resolver exercício”.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="topics" id="temas">
+      <div class="eyebrow">O QUE PODES ESTUDAR</div><h2>As bases da Análise Matemática</h2>
+      <div class="topic-grid">
+        <article><span class="topic-icon">↗</span><h3>Limites</h3><p>Estuda o comportamento das funções quando x se aproxima de um valor.</p><small>EM DESENVOLVIMENTO</small></article>
+        <article><span class="topic-icon">ƒ′</span><h3>Derivadas</h3><p>Calcula taxas de variação e derivadas de polinómios.</p><small>DISPONÍVEL</small></article>
+        <article><span class="topic-icon">∫</span><h3>Integrais</h3><p>Uma próxima etapa: primitivas e cálculo integral.</p><small>BREVEMENTE</small></article>
+      </div>
+    </section>
+    <section class="about" id="sobre"><div><div class="eyebrow">A NOSSA MISSÃO</div><h2>Não basta chegar ao resultado.<br><em>É importante perceber como.</em></h2></div><p>O AnalisaMath é um projeto educativo. A ferramenta mostra os passos usados nos tipos de exercício que já suporta e informa quando uma expressão está fora do seu alcance.</p></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">∑</span><span>Analisa<span class="brand-accent">Math</span></span></a><span>Aprender matemática, um passo de cada vez.</span><span>© 2026 AnalisaMath</span><span>Criado por Tonilson Maria</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
